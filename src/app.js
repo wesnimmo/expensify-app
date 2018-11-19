@@ -12,23 +12,9 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'water bill', amount: 4500}));
-store.dispatch(addExpense({ description: 'gas bill', createdAt: 1000}));
-store.dispatch(addExpense({ description: 'rent bill', amount: 109500}));
-// store.dispatch(setTextFilter('water'));
 
-// setTimeout(() => {
-// 	store.dispatch(setTextFilter('bill'));
-// }, 3000)
 
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
 
-// addExpense -> Water bill
-// addExpense -> Gas Bill
-// setTextFilter -> bill (2 items) -> water (1 item)
-// getVisibleExpenses -> print visibles once to screen
 
 const jsx = (
 	<Provider store={store}>
